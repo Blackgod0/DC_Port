@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react';
+import logo from '../assets/logo.svg'
 
 
 const Navbar = () => {
@@ -17,9 +18,9 @@ const Navbar = () => {
     });
   };
 
-  const handleSubmit = (event)  => {
+  const handleSubmit = (event) => {
     event.preventDefault();
-   
+
     console.log(formData);
     // Clear the form after submission
     setFormData({
@@ -38,107 +39,104 @@ const Navbar = () => {
 
 
   return (<div>
-   <nav className="bg-white shadow">
-      <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center py-4">
-          {/* Left Side - Logo */}
-          <div className="flex items-center">
-            {/* Logo */}
-            <a href="#" className="text-2xl font-bold text-indigo-600">
-              Dadcode
-            </a>
-          </div>
+    <header className="bg-black text-white p-4">
+      <div className="container mx-auto flex justify-between items-center">
+        {/* Logo */}
+        <div className="flex-shrink-0">
+          <img src="/path-to-your-logo.png" alt="Logo" className="h-8 w-8" />
+        </div>
 
-          {/* Right Side - Links and Login Button */}
-          <div className="flex items-center space-x-6">
-            {/* Navigation Links */}
-            <div className="hidden md:flex space-x-6">
+        {/* Navigation Links */}
+        <nav className="hidden md:flex space-x-8">
+          <a href="#home" className="hover:text-green-300">Home</a>
+          <a href="#about" className="hover:text-gray-400">About</a>
+          <a href="#services" className="hover:text-gray-400">Service</a>
+          <a href="#portfolio" className="hover:text-gray-400">Portfolio</a>
+          <a href="#contact" className="hover:text-gray-400">Contact</a>
+        </nav>
 
-
-            <a href="#" className='Homeclick'>
-               <p>Home</p> 
-              </a>
-            
-             
-              <a href="#" className='Aboutclick'>
-               <p> About</p> 
-              </a>
-
-              <a href="#" className="Productsclick">
-                Products
-              </a>
-              <a href="#" className="Servicesclick">
-                Services
-              </a>
-            </div>
-
-            {/* Login Button */}
-            <a href="#" className="px-4 py-2 text-sm font-medium text-white bg-indigo-600 rounded-md hover:bg-indigo-700">
-              Login
-            </a>
-          </div>
+        {/* Contact Us Button */}
+        <div className="hidden md:block">
+          <button className="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded">
+            For enquiry
+          </button>
         </div>
       </div>
-    </nav>
-   
+
+      {/* Mobile Navigation */}
+      <div className="md:hidden flex justify-between items-center">
+        {/* Logo */}
+        <div>
+          <img src={logo} alt="Logo" className="h-10 w-10" />
+        </div>
+
+        {/* Mobile Menu Button */}
+        <button className="text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </header>
 
 
-        {/* for hero section */}
-       
-        
 
-<div id="default-carousel" class="relative w-full" data-carousel="slide">
-    {/* Carousel wrapper*/}
-    <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
-          {/* Item 1*/}
+    {/* for hero section */}
+
+
+
+    <div id="default-carousel" class="relative w-full" data-carousel="slide">
+      {/* Carousel wrapper*/}
+      <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+        {/* Item 1*/}
         <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="c:\Users\karuppasamy\OneDrive\Desktop\mainfile\DC_website\src\blackbackground.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."></img>
+          <img src="c:\Users\karuppasamy\OneDrive\Desktop\mainfile\DC_website\src\blackbackground.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."></img>
         </div>
-           {/* item 2*/}
+        {/* item 2*/}
         <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="/DC_website/src/logo192.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."></img>
+          <img src="/DC_website/src/logo192.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."></img>
         </div>
-          {/* Iteam 3*/}
+        {/* Iteam 3*/}
         <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="/docs/images/carousel/carousel-3.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."></img>
+          <img src="/docs/images/carousel/carousel-3.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."></img>
         </div>
-       {/* Iteam 4*/}
+        {/* Iteam 4*/}
         <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="/docs/images/carousel/carousel-4.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."></img>
+          <img src="/docs/images/carousel/carousel-4.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."></img>
         </div>
         {/* Iteam 5*/}
         <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="/docs/images/carousel/carousel-5.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."></img>
+          <img src="/docs/images/carousel/carousel-5.svg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."></img>
         </div>
-    </div>
-    {/* Slider indicators*/}
-    <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+      </div>
+      {/* Slider indicators*/}
+      <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
         <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
         <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
         <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
         <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
         <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
+      </div>
+      {/*  Slider controls*/}
+
+      <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+          <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4" />
+          </svg>
+          <span class="sr-only">Previous</span>
+        </span>
+      </button>
+      <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+          <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4" />
+          </svg>
+          <span class="sr-only">Next</span>
+        </span>
+      </button>
     </div>
-    {/*  Slider controls*/}
-   
-    <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
-            </svg>
-            <span class="sr-only">Previous</span>
-        </span>
-    </button>
-    <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
-            </svg>
-            <span class="sr-only">Next</span>
-        </span>
-    </button>
-</div>
-  {/* for end of hero section */}
+    {/* for end of hero section */}
 
 
 
@@ -151,12 +149,12 @@ const Navbar = () => {
 
       <div className="container mx-auto px-4 py-16 flex flex-col md:flex-row">
         <div className="md:w-1/2 order-2 mb-8 md:mb-0">
-          <img src="DC_website/src/technical image.jpeg" alt="Technical Image" className="w-full md:w-auto rounded-lg" />
+          <img src={logo} alt="Technical Image" className="w-full md:w-auto rounded-lg" />
         </div>
 
         <div className="md:w-1/2 order-1 flex flex-col justify-center">
           <p className="text-lg mb-4">
-            We're developers who enjoy developing custom websites and applications to help businesses do better online. We're here to unleash the world's innovation spark by creating a more enlightened way of working.   
+            We're developers who enjoy developing custom websites and applications to help businesses do better online. We're here to unleash the world's innovation spark by creating a more enlightened way of working.
 
           </p>
 
@@ -169,10 +167,10 @@ const Navbar = () => {
         </div>
       </div>
     </div>
- {/* for end about page */}
+    {/* for end about page */}
 
- {/* for service page */}
- <div className="bg-gray-100">
+    {/* for service page */}
+    <div className="bg-gray-100">
       <h2 className="text-3xl font-bold text-center mt-10 mb-8">Our Services</h2>
 
       <div className="container mx-auto px-4 py-16 grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -194,7 +192,7 @@ const Navbar = () => {
 
         {/* Second Service Card */}
         <div className="bg-white p-8 rounded-lg shadow-md overflow-hidden relative">
-        <div className="w-24 h-24 bg-violet-500 rounded-full absolute -right-5 -top-7 flex items-center justify-center">
+          <div className="w-24 h-24 bg-violet-500 rounded-full absolute -right-5 -top-7 flex items-center justify-center">
             <p className="text-white text-2xl">02</p>
           </div>
           <div className="fill-violet-500 w-12 mx-auto mt-8">
@@ -212,7 +210,7 @@ const Navbar = () => {
 
         {/* Third Service Card */}
         <div className="bg-white p-8 rounded-lg shadow-md overflow-hidden relative">
-        <div className="w-24 h-24 bg-violet-500 rounded-full absolute -right-5 -top-7 flex items-center justify-center">
+          <div className="w-24 h-24 bg-violet-500 rounded-full absolute -right-5 -top-7 flex items-center justify-center">
             <p className="text-white text-2xl">03</p>
           </div>
           <div className="fill-violet-500 w-12 mx-auto mt-8">
@@ -229,8 +227,8 @@ const Navbar = () => {
         </div>
       </div>
     </div>
- 
-   {/* <div className="bg-white">
+
+    {/* <div className="bg-white">
       <h2 className="text-3xl font-bold text-center mt-10 mb-8">Our Services</h2>
 
 <div className="container mx-auto px-4 py-16 grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -250,11 +248,11 @@ const Navbar = () => {
   </div>
 </div>
 </div>*/}
- 
- {/* for service page end */} 
+
+    {/* for service page end */}
 
 
- <div className="bg-white">
+    <div className="bg-white">
       <section className="hero bg-gray-100 py-16">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold text-center mb-4">Our Clients</h1>
@@ -275,10 +273,10 @@ const Navbar = () => {
         <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="project">
             <h3 className="text-2xl font-bold mb-4">Project 1: Website Redesign</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>   
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
-            <img   
- src="/images/project1.jpg" alt="Project 1" className="w-full mt-4" />
+            <img
+              src="/images/project1.jpg" alt="Project 1" className="w-full mt-4" />
           </div>
           {/* Add more projects here */}
         </div>
@@ -328,31 +326,31 @@ const Navbar = () => {
 
 
 
- {/* contact page */}
+    {/* contact page */}
 
 
 
- <div className="bg-white">
+    <div className="bg-white">
       <h2 className="text-3xl font-bold text-center mt-10 mb-8">Contact Us</h2>
 
       <div className="container mx-auto px-4 py-16 grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="md:order-2">
           <h3 className="text-xl font-bold mb-4">Contact Information</h3>
           <div className="flex items-center mb-4">
-            <svg className="w-6 h-6 text-gray-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round"   
- strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414   
+            <svg className="w-6 h-6 text-gray-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round"
+              strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414   
  12.414a4 4 0 00-5.656 0L6.343 16.657c-.54.536-.54 1.409 0 1.948a4.013 4.013 0 005.657 0z"></path></svg>
             <p>D325, near SNS College of Engineering, Vaiyapuri Nagar, Saravanampatti, Coimbatore, TamilNadu, India.</p>
           </div>
           <div className="flex items-center mb-4">
-            <svg className="w-6 h-6 text-gray-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round"   
- strokeLinejoin="round" strokeWidth="2" d="M3 8l7.894   
+            <svg className="w-6 h-6 text-gray-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round"
+              strokeLinejoin="round" strokeWidth="2" d="M3 8l7.894   
  7.894"></path><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 13l-7.894 7.894"></path></svg>
             <p>contact@DC.com</p>
           </div>
           <div className="flex items-center">
-            <svg className="w-6 h-6 text-gray-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round"   
- strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2   
+            <svg className="w-6 h-6 text-gray-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round"
+              strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2   
  0 012 2v4a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h4a2 2 0 012 2v4a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h4zm5 3a2 2 0 00-2 2v4a2 2 0 002 2h4a2 2 0 002-2v-4a2 2 0 00-2-2h-4zm0 6a2 2 0 00-2 2v4a2 2 0 002 2h4a2 2 0 002-2v-4a2 2 0 00-2-2h-4z"></path></svg>
             <p>+91 234234234234324</p>
           </div>
@@ -361,33 +359,33 @@ const Navbar = () => {
         <div className="md:order-1 bg-green-100 p-8 rounded-lg shadow-md">
           <form onSubmit={handleSubmit}>
             <div className="mb-4">
-              <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name</label>   
+              <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name</label>
 
               <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} className="mt-1   
  block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500   
  sm:text-sm" />
             </div>
             <div className="mb-4">
-              <label htmlFor="email"   
- className="block text-sm font-medium text-gray-700">Email Address</label>
+              <label htmlFor="email"
+                className="block text-sm font-medium text-gray-700">Email Address</label>
               <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} className="mt-1   
  block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500   
  sm:text-sm" />
             </div>
             <div className="mb-4">
-              <label htmlFor="subject"   
- className="block text-sm font-medium text-gray-700">Subject</label>
-              <input type="text" id="subject" name="subject"   
- value={formData.subject} onChange={handleChange} className="mt-1   
+              <label htmlFor="subject"
+                className="block text-sm font-medium text-gray-700">Subject</label>
+              <input type="text" id="subject" name="subject"
+                value={formData.subject} onChange={handleChange} className="mt-1   
  block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500   
  sm:text-sm" />
             </div>
             <div className="mb-4">
-              <label htmlFor="message"   
- className="block text-sm font-medium text-gray-700">Message</label>
-              <textarea id="message" name="message" rows="4" value={formData.message} onChange={handleChange}   
- className="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500   
- sm:text-sm"></textarea>   
+              <label htmlFor="message"
+                className="block text-sm font-medium text-gray-700">Message</label>
+              <textarea id="message" name="message" rows="4" value={formData.message} onChange={handleChange}
+                className="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500   
+ sm:text-sm"></textarea>
 
             </div>
             <button type="submit" className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded">Submit</button>
@@ -409,74 +407,74 @@ const Navbar = () => {
         <div className="md:order-2">
           <h3 className="text-xl font-bold mb-4">Contact Information</h3>
           <div className="flex items-center mb-4">
-            <svg className="w-6 h-6 text-gray-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round"   
- strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414   
+            <svg className="w-6 h-6 text-gray-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round"
+              strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414   
  12.414a4 4 0 00-5.656 0L6.343 16.657c-.54.536-.54 1.409 0 1.948a4.013 4.013 0 005.657 0z"></path></svg>
             <h4 className="font-bold mr-2">Address:</h4>
             <p>D325, near SNS College of Engineering, Vaiyapuri Nagar, Saravanampatti, Coimbatore, TamilNadu, India.</p>
           </div>
           <div className="flex items-center mb-4">
-            <svg className="w-6 h-6 text-gray-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round"   
- strokeLinejoin="round" strokeWidth="2" d="M3 8l7.894   
+            <svg className="w-6 h-6 text-gray-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round"
+              strokeLinejoin="round" strokeWidth="2" d="M3 8l7.894   
  7.894"></path><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 13l-7.894 7.894"></path></svg>
             <h4 className="font-bold mr-2">Email:</h4>
             <p>contact@DC.com</p>
           </div>
           <div className="flex items-center">
-            <svg className="w-6 h-6 text-gray-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round"   
- strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2   
+            <svg className="w-6 h-6 text-gray-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round"
+              strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2   
  0 012 2v4a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h4a2 2 0 012 2v4a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h4zm5 3a2 2 0 00-2 2v4a2 2 0 002 2h4a2 2 0 002-2v-4a2 2 0 00-2-2h-4zm0 6a2 2 0 00-2 2v4a2 2 0 002 2h4a2 2 0 002-2v-4a2 2 0 00-2-2h-4z"></path></svg>
             <h4 className="font-bold mr-2">Call:</h4>
             <p>+91 6745674757</p>
           </div>
         </div>
 
-       
-<div class="container px-4 mx-auto">
-  <div class="mx-auto">
-    <div class="max-w-md mx-auto px-8 py-6 bg-gray-100 rounded-lg shadow-lg">
-      <h2 class="text-2xl font-semibold text-gray-800 mb-4">Get in touch</h2>
-      <form>
-        <div class="mb-4">
-          <label class="block text-gray-800 mb-1" for="name">Your Name</label>
-          <input
-            class="w-full px-4 py-2 bg-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-300 transition duration-300"
-            placeholder="Enter your name"
-            type="text"
-          />
+
+        <div class="container px-4 mx-auto">
+          <div class="mx-auto">
+            <div class="max-w-md mx-auto px-8 py-6 bg-gray-100 rounded-lg shadow-lg">
+              <h2 class="text-2xl font-semibold text-gray-800 mb-4">Get in touch</h2>
+              <form>
+                <div class="mb-4">
+                  <label class="block text-gray-800 mb-1" for="name">Your Name</label>
+                  <input
+                    class="w-full px-4 py-2 bg-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-300 transition duration-300"
+                    placeholder="Enter your name"
+                    type="text"
+                  />
+                </div>
+                <div class="mb-4">
+                  <label class="block text-gray-800 mb-1" for="email">Your Email</label>
+                  <input
+                    class="w-full px-4 py-2 bg-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-300 transition duration-300"
+                    placeholder="Enter your email"
+                    name="email"
+                    id="email"
+                    type="email"
+                  />
+                </div>
+                <div class="mb-4">
+                  <label class="block text-gray-800 mb-1" for="message"
+                  >Your Message</label
+                  >
+                  <textarea
+                    class="w-full px-4 py-2 bg-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-300 transition duration-300"
+                    rows="4"
+                    placeholder="Enter your message"
+                    name="message"
+                    id="message"
+                  ></textarea>
+                </div>
+                <button
+                  class="w-full bg-yellow-300 text-gray-800 py-2 px-4 rounded-lg hover:bg-yellow-400 transition duration-300"
+                  type="submit"
+                >
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
         </div>
-        <div class="mb-4">
-          <label class="block text-gray-800 mb-1" for="email">Your Email</label>
-          <input
-            class="w-full px-4 py-2 bg-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-300 transition duration-300"
-            placeholder="Enter your email"
-            name="email"
-            id="email"
-            type="email"
-          />
-        </div>
-        <div class="mb-4">
-          <label class="block text-gray-800 mb-1" for="message"
-            >Your Message</label
-          >
-          <textarea
-            class="w-full px-4 py-2 bg-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-300 transition duration-300"
-            rows="4"
-            placeholder="Enter your message"
-            name="message"
-            id="message"
-          ></textarea>
-        </div>
-        <button
-          class="w-full bg-yellow-300 text-gray-800 py-2 px-4 rounded-lg hover:bg-yellow-400 transition duration-300"
-          type="submit"
-        >
-          Send Message
-        </button>
-      </form>
-    </div>
-  </div>
-</div>
 
       </div>
     </div>
@@ -490,7 +488,7 @@ const Navbar = () => {
 
 
 
-    
+
     <footer className="bg-gray-200 text-gray-800 py-8">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
@@ -563,7 +561,6 @@ const Navbar = () => {
 
 
 
- 
 
 
 
@@ -572,7 +569,8 @@ const Navbar = () => {
 
 
 
-</div> 
+
+  </div>
   );
 };
 

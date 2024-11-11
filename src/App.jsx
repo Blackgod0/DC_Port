@@ -1,7 +1,7 @@
-import './App.js'
+import './App.jsx'
 import './App.css';
 
-import Navbar from './Navbar';
+import Navbar from './components/Navbar.jsx';
 
 function App() {
   return (
@@ -13,4 +13,4 @@ function App() {
   );
 }
 
-export default Navbar;
+export default App;
